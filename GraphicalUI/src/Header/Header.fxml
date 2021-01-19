@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" minHeight="160.0" prefHeight="160.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Header.HeaderController">
+    <top>
+        <VBox prefHeight="-1.0" prefWidth="-1.0">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="General">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#updateUsernameUI" text="Switch username" />
+                                <MenuItem mnemonicParsing="false" onAction="#exitApp" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Repository">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#createRepositoryUI" text="Create new Repository" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#switchRepositoryUI" text="Load Repository from PC" />
+                                <MenuItem mnemonicParsing="false" onAction="#loadRepositoryFromXmlUI" text="Load Repository from XML file" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="branchMenu" mnemonicParsing="false" text="Branches">
+                            <items>
+                        <Menu mnemonicParsing="false" text="Add Branch">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#addBranchOnCurrentCommitUI" text="on current commit" />
+                                      <MenuItem mnemonicParsing="false" onAction="#addBranchOnCommitUI" text="on commit..." />
+                          </items>
+                        </Menu>
+                                <MenuItem mnemonicParsing="false" onAction="#deleteBranchUI" text="Delete Branch" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#checkOutUI" text="Checkout to..." />
+                                <MenuItem mnemonicParsing="false" onAction="#resetHeadBranchUI" text="Reset head branch..." />
+                                <MenuItem mnemonicParsing="false" onAction="#mergeBranchesUI" text="Merge head branch..." />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Collaboration">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#cloneRepositoryUI" text="Clone Repository..." />
+                                <MenuItem fx:id="fetchButton" mnemonicParsing="false" onAction="#fetchUI" text="Fetch" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem fx:id="pullButton" mnemonicParsing="false" onAction="#pullUI" text="Pull" />
+                                <MenuItem fx:id="pushButton" mnemonicParsing="false" onAction="#pushUI" text="Push" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+              <Label fx:id="localRepDetailsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: linear-gradient(to bottom, paleturquoise, White);" text="M.A.GIT" textAlignment="LEFT">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="remoteRepDetailsLabel" alignment="CENTER" layoutX="10.0" layoutY="42.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" text="We allow you to use your files safely" textAlignment="LEFT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" style="-fx-border-radius: 6;" />
+                <ToolBar>
+               <items>
+                  <MenuButton fx:id="usernameButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Administrator">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#updateUsernameUI" text="Switch Username" />
+                     </items>
+                  </MenuButton>
+                   <Button fx:id="wcButton" mnemonicParsing="false" onAction="#showWorkingCopyStatusUI" text="Show WC Status" />
+                   <Button fx:id="commitButton" mnemonicParsing="false" onAction="#addCommitUI" text="Commit" />
+                   <Button fx:id="mergeButton" mnemonicParsing="false" onAction="#mergeBranchesUI" text="Merge" />
+               </items>
+                </ToolBar>
+            </children>
+        </VBox>
+    </top>
+</BorderPane>

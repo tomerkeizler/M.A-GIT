@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="mainComponent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Magit.MagitController">
+   <top>
+      <fx:include fx:id="headerComponent" source="../Header/Header.fxml" />
+   </top>
+   <left>
+      <fx:include fx:id="branchListComponent" source="../BranchList/BranchList.fxml" />
+   </left>
+   <center>
+      <SplitPane dividerPositions="0.8" focusTraversable="true">
+         <items>
+            <fx:include fx:id="commitTreeComponent" source="../CommitTree/CommitTree.fxml" />
+            <fx:include fx:id="fileTreeComponent" source="../FileTree/FileTree.fxml" />
+         </items>
+      </SplitPane>
+   </center>
+   <right>
+   </right>
+</BorderPane>

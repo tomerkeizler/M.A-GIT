@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Delta.DeltaController">
+   <content>
+      <BorderPane id="BorderPane">
+         <top>
+            <Label fx:id="treeTitle" maxWidth="1.7976931348623157E308" style="-fx-background-color: linear-gradient(to bottom, paleturquoise, White); -fx-alignment: center;" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+              <TreeView fx:id="fileTree" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

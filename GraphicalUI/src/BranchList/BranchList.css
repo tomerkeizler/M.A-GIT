@@ -1,0 +1,27 @@
+
+.menu-button {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.menu-button:hover {
+    -fx-background-color: white;
+}
+
+.RTB {
+    -fx-background-color: plum
+}
+
+.RB {
+    -fx-background-color: palegreen
+}
+
+.LB {
+    -fx-background-color: bisque
+}
+
+.HEAD {
+    -fx-border-color: black;
+    -fx-border-width: 5;
+    -fx-font-weight: bold;
+}

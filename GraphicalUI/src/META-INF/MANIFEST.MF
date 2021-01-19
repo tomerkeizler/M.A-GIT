@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: Magit.Main
+Class-Path: AncestorFinder.jar commons-collections4-4.3.jar commons-code
+ c-1.12.jar commons-io-2.6.jar fxgraph-0.0.3.jar AncestorFinder.jar
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="845.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConflictSolver.ConflictSolverController">
+   <content>
+      <GridPane alignment="CENTER" prefHeight="845.0" prefWidth="1060.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="250.0" minWidth="150.0" prefWidth="250.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="ALWAYS" prefWidth="400.0" />
+            <ColumnConstraints hgrow="ALWAYS" prefWidth="400.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="50.0" prefHeight="300.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="50.0" prefHeight="300.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="141.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="deleteButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Delete file" GridPane.columnIndex="2" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button fx:id="saveButton" alignment="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Save file" GridPane.columnIndex="3" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <TextArea fx:id="ancestorContent" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextArea fx:id="oursContent" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextArea fx:id="theirsContent" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextArea fx:id="finalContent" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label fx:id="conflictTitle" maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" prefWidth="1000.0" textFill="WHITE" style="-fx-alignment: center;" text="Current conflict details" GridPane.columnIndex="2" GridPane.columnSpan="2">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label fx:id="conflictDetails" maxWidth="1.7976931348623157E308" minHeight="60.0" prefHeight="60.0" prefWidth="1000.0" textFill="WHITE" style="-fx-alignment: center;" text="Conflict details" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowSpan="8" />
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefWidth="250.0" GridPane.rowSpan="8">
+               <content>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" style="-fx-background-color: white;">
+                     <children>
+                        <Label text="Conflicts" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <ToolBar fx:id="conflictList" orientation="VERTICAL" prefWidth="250.0" style="-fx-background-color: linear-gradient(to top, paleturquoise, White);" VBox.vgrow="ALWAYS">
+                        <items>
+                           <VBox fx:id="conflictListVbox" alignment="CENTER" spacing="7.0" />
+                        </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Label maxWidth="1.7976931348623157E308" prefWidth="400.0" style="-fx-background-color: paleturquoise; -fx-alignment: center;" text="Ancsestor" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="oursBranchLabel" maxWidth="1.7976931348623157E308" prefWidth="400.0" style="-fx-background-color: paleturquoise; -fx-alignment: center;" text="Ours - Branch name" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label maxWidth="1.7976931348623157E308" prefWidth="400.0" style="-fx-alignment: center; -fx-background-color: black;" text="Your solution" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="theirsBranchLabel" maxWidth="1.7976931348623157E308" prefWidth="400.0" style="-fx-background-color: paleturquoise; -fx-alignment: center;" text="Theirs - Branch name" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="theirsActionLabel" maxWidth="1.7976931348623157E308" prefWidth="400.0" style="-fx-background-color: paleturquoise; -fx-alignment: center;" text="Theirs - Action" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="oursActionLabel" maxWidth="1.7976931348623157E308" prefWidth="400.0" style="-fx-background-color: paleturquoise; -fx-alignment: center;" text="Ours - Action" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </content>
+</ScrollPane>
